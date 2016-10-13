@@ -9,7 +9,6 @@
 ## c) set the value of the inverse
 ## d) get the value of the inverse
 
-
 makeCacheMatrix <- function(x = matrix()) {
   i= NULL
   set = function(y){
@@ -21,10 +20,16 @@ makeCacheMatrix <- function(x = matrix()) {
   getinverse = function() i
   list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
 }
-
-
-## Write a short comment describing this function
-
+    
+## The function cacheSolve() calculates the inverse of the matrix
+## created by makeCacheMatrix(). However, before this function
+## first checks if the inverse has already been
+## calculated. If yes, then it gets the inverse from the cache
+## without finding inverse. Otherwise, it
+## calculates the inverse of the matrix and sets the value
+## of the inverse in the cache using the setinverse function.
+ 
+    
 cacheSolve <- function(x, ...) {
   
   ## Return a matrix that is the inverse of 'x'
