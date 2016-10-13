@@ -1,7 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The following functions are able to create a 
+## matrix that allows its inverse to be cached, so that it
+## doesn't need to be calculate everytime repeatedly,but use cached data.
 
-## Write a short comment describing this function
+## The function makeCacheMatrix() creates a 
+## matrix, which is actually list containing a function to
+## a) set the value of the matrix
+## b) get the value of the matrix
+## c) set the value of the inverse
+## d) get the value of the inverse
+
 
 makeCacheMatrix <- function(x = matrix()) {
   i= NULL
